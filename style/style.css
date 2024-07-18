@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+
+ * {
+	 box-sizing: border-box;
+	 user-select: none;
+}
+ a {
+	 color: #fff;
+	 text-decoration: none;
+}
+
+ body {
+	 margin: 0;
+	 padding: 0;
+	 height: 100vh;
+	 color: white;
+	 background: black;
+	 font-family: "Cormorant Garamond", serif;
+	 text-transform: uppercase;
+}
+ h2 {
+	 font-size: clamp(1rem, 5vw, 5rem);
+	 font-weight: 400;
+	 text-align: center;
+	 letter-spacing: 0.5em;
+	 margin-right: -0.5em;
+	 color: #ccc;
+	 width: 90vw;
+	 max-width: 1200px;
+}
+ header {
+	 position: fixed;
+	 display: flex;
+	 align-items: center;
+	 justify-content: space-between;
+	 padding: 0 5%;
+	 width: 100%;
+	 z-index: 3;
+	 height: 7em;
+	 font-family: "Bebas Neue", sans-serif;
+	 font-size: clamp(0.66rem, 2vw, 1rem);
+	 letter-spacing: 0.5em;
+
+	.wrapper {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.ham {
+		margin-left: auto;
+
+		span {
+			font-size: 2rem;
+			cursor: pointer;
+		}
+	}
+
+	ul {
+		position: absolute;
+		width: 20%;
+		top: 20%;
+		left: 75%;
+		z-index: -1;
+
+		background-color: #dbddda;
+
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		justify-content: center;
+		margin: 0 1px;
+
+		// for animation
+		opacity: 0;
+		height: 0;
+
+		li {
+			margin: 1rem 2rem;
+			font-size: 2rem;
+		}
+	}
+}
+ section {
+	 height: 100%;
+	 width: 100%;
+	 top: 0;
+	 position: fixed;
+	 visibility: hidden;
+}
+ section .outer, section .inner {
+	 width: 100%;
+	 height: 100%;
+	 overflow-y: hidden;
+}
+ section .bg {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 position: absolute;
+	 height: 100%;
+	 width: 100%;
+	 top: 0;
+	 background-size: cover;
+	 background-position: center;
+}
+ section .bg h2 {
+	 z-index: 2;
+}
+ section .bg .clip-text {
+	 overflow: hidden;
+}
+ .first .bg {
+	 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("https://images.pexels.com/photos/17483870/pexels-photo-17483870/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-proje.png");
+}
+ .second .bg {
+	 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("https://images.pexels.com/photos/17483874/pexels-photo-17483874/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-by-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-pr.png");
+}
+ .third .bg {
+	 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("https://images.pexels.com/photos/17483873/pexels-photo-17483873/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-proje.png");
+}
+
+ .fourth .bg {
+	 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%), url("https://images.pexels.com/photos/17483873/pexels-photo-17483873/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-proje.png");
+}
+
+
+ h2 * {
+	 will-change: transform;
+}
+
+.image-container {
+	display: block;
+	justify-content: space-between;
+	width: 80vw; /* Adjust width as needed */
+}
+
+.image-item {
+	text-align: center;
+	width: 45%; /* Adjust width as needed */
+}
+
+.image-item img {
+	margin: 20px auto; /* Adjust the margin value as needed */
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
