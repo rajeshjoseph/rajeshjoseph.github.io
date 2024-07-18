@@ -58,7 +58,7 @@ Observer.create({
   preventDefault: true
 });
 
-gotoSection(3, 1);
+gotoSection(0, 1);
 
 function scrollToSection() {
 	gotoSection(3, 1);
